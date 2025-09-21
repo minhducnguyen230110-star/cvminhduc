@@ -2,211 +2,254 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Nguyen Minh Duc CV</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nguyen Minh Duc - CV | Electric Xtra</title>
+  <!-- Inter Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Lucide Icon Font CSS -->
+  <link href="https://unpkg.com/lucide@0.263.0/dist/lucide.css" rel="stylesheet">
+  <!-- Lucide JavaScript for icon initialization -->
+  <script src="https://unpkg.com/lucide@0.263.0/dist/umd/lucide.min.js"></script>
   <style>
-    /* Basic reset & utilities (partial Tailwind-like) */
-    * { margin:0; padding:0; box-sizing: border-box; }
-    body { font-family: sans-serif; line-height: 1.6; }
-    .hidden { display: none; }
-    .fixed { position: fixed; }
-    .relative { position: relative; }
-    .absolute { position: absolute; }
-    .top-0 { top: 0; }
-    .bottom-0 { bottom: 0; }
-    .left-0 { left: 0; }
-    .right-0 { right: 0; }
-    .w-full { width: 100%; }
-    .h-full { height: 100%; }
-    .min-h-screen { min-height: 100vh; }
-    .mx-auto { margin-left: auto; margin-right: auto; }
-    .max-w-6xl { max-width: 72rem; /* approx 1152px */ }
-    .max-w-4xl { max-width: 56rem; }
-    .max-w-3xl { max-width: 48rem; }
-    .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
-    .py-4 { padding-top:1rem; padding-bottom:1rem; }
-    .py-16 { padding-top:4rem; padding-bottom:4rem; }
-    .pt-24 { padding-top:6rem; }
-    .pb-16 { padding-bottom:4rem; }
-    .gap-12 { gap:3rem; }
-    .gap-8 { gap:2rem; }
-    .grid { display: grid; }
-    .lg\\:grid-cols-2 { grid-template-columns: repeat(2,1fr); }
-    .md\\:grid-cols-2 { grid-template-columns: repeat(2,1fr); }
-    .flex { display: flex; }
-    .items-center { align-items: center; }
-    .justify-between { justify-content: space-between; }
-    .justify-center { justify-content: center; }
-    .text-center { text-align: center; }
-    .text-left { text-align: left; }
-    .font-bold { font-weight: bold; }
-    .font-medium { font-weight: 500; }
-    .text-gray-900 { color: #111827; }
-    .text-gray-800 { color: #1f2937; }
-    .text-gray-700 { color: #374151; }
-    .text-gray-600 { color: #4b5563; }
-    .text-gray-500 { color: #6b7280; }
-    .text-blue-600 { color: #2563eb; }
-    .text-blue-100 { color: #dbeafe; }
-    .bg-white { background-color: #ffffff; }
-    .bg-white\\/80 { background-color: rgba(255,255,255,0.8); }
-    .bg-blue-600 { background-color: #2563eb; }
-    .bg-blue-50 { background-color: #eff6ff; }
-    .bg-indigo-50 { background-color: #eef2ff; }
-    .bg-gradient-to-br { background-image: linear-gradient(to bottom right, var(--gradient-from), var(--gradient-to)); }
-    .from-blue-50 { --gradient-from: #eff6ff; }
-    .via-white { /* not used in simplest gradient here */ }
-    .to-indigo-50 { --gradient-to: #eef2ff; }
-    .rounded-lg { border-radius: 0.5rem; }
-    .rounded-xl { border-radius: 1rem; }
-    .rounded-full { border-radius: 9999px; }
-    .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); }
-    .shadow-xl { box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04); }
-    .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05); }
-    .border { border-width:1px; border-style: solid; }
-    .border-2 { border-width:2px; }
-    .border-blue-600 { border-color: #2563eb; }
-    .border-gray-100 { border-color: #f3f4f6; }
-    .text-white { color: white; }
-    .text-blue-700 { color: #1d4ed8; }
-    .bg-yellow-400 { background-color: #facc15; }
-    .text-yellow-900 { color: #78350f; }
-    .text-xs { font-size: 0.75rem; }
-    .text-sm { font-size: 0.875rem; }
-    .text-lg { font-size: 1.125rem; }
-    .text-xl { font-size: 1.25rem; }
-    .text-3xl { font-size: 1.875rem; }
-    .text-4xl { font-size: 2.25rem; }
-    .text-5xl { font-size: 3rem; }
-    .leading-tight { line-height: 1.2; }
-    .leading-relaxed { line-height: 1.75; }
-    .transition-all { transition: all 0.3s ease; }
-    .duration-200 { transition-duration: 0.2s; }
-    .duration-300 { transition-duration: 0.3s; }
-    .duration-700 { transition-duration: 0.7s; }
-    .ease-out { transition-timing-function: ease-out; }
-    .translate-y-10 { transform: translateY(2.5rem); }
-    .opacity-0 { opacity: 0; }
-    .opacity-100 { opacity: 1; }
-    .hover\\:text-blue-600:hover { color: #2563eb; }
-    .hover\\:bg-blue-700:hover { background-color: #1d4ed8; }
-    .hover\\:bg-blue-50:hover { background-color: #ebf8ff; }
-    .hover\\:shadow-xl:hover { box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04); }
-    .cursor-pointer { cursor: pointer; }
-    .z-50 { z-index:50; }
-    .backdrop-blur-md { backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
-    /* Add more as needed */
+    /* Cyberpunk-inspired dark theme from Electric Xtra */
+    :root {
+      --primary-glow: #4f46e5;
+      --secondary-glow: #9333ea;
+      --accent-glow: #f59e0b;
+      --bg-dark: #0a0a0a;
+      --bg-secondary: #1a1a1a;
+      --text-primary: #ffffff;
+      --text-secondary: #e5e7eb;
+      --card-bg: rgba(26, 26, 26, 0.8);
+      --border-glow: rgba(79, 70, 229, 0.5);
+    }
+    *,::before,::after{box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:Inter,sans-serif;margin:0;background:var(--bg-dark);color:var(--text-primary);overflow-x:hidden}
+    .min-h-screen{min-height:100vh}.fixed{position:fixed}.top-0{top:0}.w-full{width:100%}.z-50{z-index:50}.transition-all{transition-property:all;transition-duration:0.3s}.max-w-7xl{max-width:80rem}.mx-auto{margin-left:auto;margin-right:auto}.px-4{padding-left:1rem;padding-right:1rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.flex{display:flex}.justify-between{justify-content:space-between}.items-center{align-items:center}.text-2xl{font-size:1.5rem;line-height:2rem}.font-extrabold{font-weight:800}.text-gray-100{color:var(--text-primary)}.space-x-6>:not([hidden])~:not([hidden]){margin-right:1.5rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.md\:text-base{font-size:1rem;line-height:1.5rem}.font-semibold{font-weight:600}.text-gray-400{color:#9ca3af}.hover\:text-primary:hover{color:var(--primary-glow)}.pt-24{padding-top:6rem}.pb-16{padding-bottom:4rem}.mb-12{margin-bottom:3rem}.justify-center{justify-content:center}.relative{position:relative}.w-40{width:10rem}.h-40{height:10rem}.md\:w-48{width:12rem}.md\:h-48{height:12rem}.rounded-full{border-radius:9999px}.overflow-hidden{overflow:hidden}.shadow-2xl{box-shadow:0 25px 50px -12px rgba(0,0,0,0.25)}.border-4{border-width:4px}.border-white{border-color:#fff}.bg-accent{background-color:var(--accent-glow)}.text-accent-dark{color:#78350f}.px-3{padding-left:0.75rem;padding-right:0.75rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.text-xs{font-size:0.75rem;line-height:1rem}.shadow-glow{box-shadow:0 0 20px rgba(79,70,229,0.5)}.grid{display:grid}.lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.gap-8{gap:2rem}.md\:gap-12{gap:3rem}.space-y-6>:not([hidden])~:not([hidden]){margin-top:1.5rem}.space-y-2>:not([hidden])~:not([hidden]){margin-top:0.5rem}.text-center{text-align:center}.lg\:text-left{text-align:left}.text-4xl{font-size:2.25rem;line-height:2.5rem}.md\:text-5xl{font-size:3rem;line-height:1}.font-bold{font-weight:700}.text-gray-300{color:var(--text-secondary)}.text-lg{font-size:1.125rem;line-height:1.75rem}.md\:text-xl{font-size:1.25rem;line-height:2rem}.text-gray-200{color:#d1d5db}.leading-relaxed{line-height:1.625}.flex-col{flex-direction:column}.sm\:flex-row{flex-direction:row}.gap-4{gap:1rem}.pt-4{padding-top:1rem}.lg\:justify-start{justify-content:flex-start}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.bg-primary{background-color:var(--primary-glow)}.text-white{color:#fff}.rounded-xl{border-radius:0.75rem}.hover\:bg-primary-dark:hover{background-color:#4338ca}.gap-2{gap:0.5rem}.hover\:shadow-glow-xl:hover{box-shadow:0 0 30px rgba(79,70,229,0.7)}.border-2{border-width:2px}.border-primary{border-color:var(--primary-glow)}.hover\:bg-primary-light:hover{background-color:rgba(79,70,229,0.1)}.bg-secondary{background-color:var(--bg-secondary)}.rounded-2xl{border-radius:1rem}.p-6{padding:1.5rem}.md\:p-8{padding:2rem}.space-x-3>:not([hidden])~:not([hidden]){margin-right:0.75rem}.w-5{width:1.25rem}.h-5{height:1.25rem}.space-y-3>:not([hidden])~:not([hidden]){margin-top:0.75rem}.w-4{width:1rem}.h-4{height:1rem}.text-gray-500{color:#6b7280}.py-16{padding-top:4rem;padding-bottom:4rem}.mb-4{margin-bottom:1rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}.w-20{width:5rem}.h-1{height:0.25rem}.bg-primary-line{background-color:var(--primary-glow)}.absolute{position:absolute}.left-4{left:1rem}.top-0{top:0}.bottom-0{bottom:0}.w-px{width:1px}.ml-10{margin-left:2.5rem}.-left-6{left:-1.5rem}.top-8{top:2rem}.w-8{width:2rem}.h-8{height:2rem}.mb-2{margin-bottom:0.5rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.md\:text-2xl{font-size:1.5rem;line-height:2rem}.mb-3{margin-bottom:0.75rem}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.gap-6{gap:1.5rem}.border-gray-800{border-color:#1f2937}.w-12{width:3rem}.h-12{height:3rem}.bg-success{background-color:#10b981}.mr-4{margin-right:1rem}.text-success{color:#059669}.bg-warning{background-color:#f59e0b}.text-warning{color:#d97706}.mt-8{margin-top:2rem}.bg-primary-light{background-color:rgba(79,70,229,0.1)}.text-primary-dark{color:#4338ca}.bg-success-light{background-color:#d1fae5}.bg-success-border{border-color:#d1fae5}.bg-primary-secondary{background-color:rgba(147,51,234,0.1)}.bg-primary-secondary-border{border-color:rgba(147,51,234,0.2)}.w-full{width:100%}.bg-gray-700{background-color:#374151}.h-2\.5{height:0.625rem}.bg-gradient-primary{background:linear-gradient(to right,var(--primary-glow),var(--secondary-glow))}.duration-1000{transition-duration:1s}.ease-out{transition-timing-function:cubic-bezier(0.4,0,0.2,1)}.text-primary-light{color:rgba(255,255,255,0.8)}.max-w-4xl{max-width:56rem}.bg-glass{background:rgba(255,255,255,0.05)}.w-6{width:1.5rem}.h-6{height:1.5rem}.text-primary-light{color:rgba(255,255,255,0.8)}.mb-6{margin-bottom:1.5rem}.bg-glass-hover{background:rgba(255,255,255,0.1)}.hover\:bg-glass-hover:hover{background:rgba(255,255,255,0.15)}.bg-footer{background-color:#111827}.text-gray-400{color:#9ca3af}.py-8{padding-top:2rem;padding-bottom:2rem}
+
+    /* Electric Xtra Cyberpunk Effects */
+    .cyber-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+    }
+    .grid-animation {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        linear-gradient(rgba(79,70,229,0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(79,70,229,0.1) 1px, transparent 1px);
+      background-size: 50px 50px;
+      animation: grid-move 20s linear infinite;
+    }
+    @keyframes grid-move {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(50px, 50px); }
+    }
+    .particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    .particle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: var(--primary-glow);
+      border-radius: 50%;
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.5; }
+      50% { transform: translateY(-20px) rotate(180deg); opacity: 1; }
+    }
+    .hero-glitch {
+      animation: glitch 2s infinite;
+    }
+    @keyframes glitch {
+      0%, 100% { transform: translate(0); }
+      10% { transform: translate(-2px, -2px); }
+      20% { transform: translate(2px, 2px); }
+      30% { transform: translate(-1px, 1px); }
+      40% { transform: translate(1px, -1px); }
+      50% { transform: translate(-2px, 2px); }
+      60% { transform: translate(2px, -2px); }
+      70% { transform: translate(-1px, -1px); }
+      80% { transform: translate(1px, 1px); }
+      90% { transform: translate(-2px, -2px); }
+    }
+    .glow-text {
+      text-shadow: 0 0 10px var(--primary-glow);
+    }
+    .card-glow {
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    .card-glow:hover {
+      box-shadow: 0 0 30px var(--border-glow);
+      transform: translateY(-5px);
+    }
+    .btn-glow {
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-glow::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+    .btn-glow:hover::before {
+      left: 100%;
+    }
+    /* Progress bar */
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(to right, var(--primary-glow), var(--secondary-glow));
+      z-index: 60;
+      transition: width 0.3s ease-out;
+    }
   </style>
 </head>
-<body class="min-h-screen" style="background: linear-gradient(to bottom right, #eff6ff, #ffffff, #eef2ff);">
-  
-  <!-- Navigation -->
-  <nav id="navbar" class="fixed top-0 w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="text-xl font-bold text-gray-800">Nguyen Minh Duc</div>
-      <div id="nav-buttons" class="hidden">
-        <!-- Buttons will be inserted by JS for sections: about, education, achievements, interests, contact -->
+<body>
+  <div class="progress-bar" id="progress-bar"></div>
+  <div class="cyber-bg">
+    <div class="grid-animation"></div>
+    <div class="particles" id="particles"></div>
+  </div>
+  <div class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-secondary backdrop-blur-lg shadow-glow z-50 transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4">
+        <div class="flex justify-between items-center">
+          <div class="text-2xl font-extrabold text-gray-100 glow-text">Nguyen Minh Duc</div>
+          <div class="flex space-x-6 md:space-x-8">
+            <a href="#about" class="nav-link capitalize text-sm md:text-base font-semibold text-gray-400 hover:text-primary active" aria-label="Navigate to about section">About</a>
+            <a href="#education" class="nav-link capitalize text-sm md:text-base font-semibold text-gray-400 hover:text-primary" aria-label="Navigate to education section">Education</a>
+            <a href="#achievements" class="nav-link capitalize text-sm md:text-base font-semibold text-gray-400 hover:text-primary" aria-label="Navigate to achievements section">Achievements</a>
+            <a href="#interests" class="nav-link capitalize text-sm md:text-base font-semibold text-gray-400 hover:text-primary" aria-label="Navigate to interests section">Interests</a>
+            <a href="#contact" class="nav-link capitalize text-sm md:text-base font-semibold text-gray-400 hover:text-primary" aria-label="Navigate to contact section">Contact</a>
+          </div>
+        </div>
       </div>
-      <div class="flex space-x-8 md:flex">
-        <!-- Fallback, in case JS fails -->
-      </div>
-    </div>
-  </nav>
+    </nav>
 
-  <main>
-    <!-- About Section -->
-    <section id="about" class="pt-24 pb-16 px-6">
-      <div class="max-w-6xl mx-auto">
+    <!-- Hero Section -->
+    <section id="about" class="pt-24 pb-16 px-4 sm:px-6" style="min-height: 100vh; display: flex; align-items: center;">
+      <div class="max-w-7xl mx-auto">
+        <!-- Profile Picture -->
         <div class="flex justify-center mb-12">
           <div class="relative">
-            <div class="w-40 h-40 lg:w-48 lg:h-48 rounded-full overflow-hidden shadow-2xl border-4 border-white bg-gradient-to-br from-blue-100 to-indigo-200">
-              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%234F46E5;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%236366F1;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='200' height='200' fill='url(%23grad)' /%3E%3Ccircle cx='100' cy='85' r='25' fill='white' opacity='0.8' /%3E%3Cpath d='M75 130 L125 130 L115 150 L85 150 Z' fill='white' opacity='0.8' /%3E%3Ctext x='100' y='175' text-anchor='middle' fill='white' font-family='Arial, sans-serif' font-size='12' font-weight='bold'%3EAchievement Winner%3C/text%3E%3C/svg%3E" alt="Nguyen Minh Duc - Profile Picture" class="w-full h-full object-cover">
+            <div class="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden shadow-2xl border-4 border-white bg-gradient-to-br from-primary to-secondary relative">
+              <img 
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%234F46E5;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%239333EA;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='200' height='200' fill='url(%23grad)' /%3E%3Ccircle cx='100' cy='85' r='25' fill='white' opacity='0.8' /%3E%3Cpath d='M75 130 L125 130 L115 150 L85 150 Z' fill='white' opacity='0.8' /%3E%3Ctext x='100' y='175' text-anchor='middle' fill='white' font-family='Inter, sans-serif' font-size='12' font-weight='bold'%3EAchievement Winner%3C/text%3E%3C/svg%3E"
+                alt="Nguyen Minh Duc - Profile Picture"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary opacity-50 animate-pulse"></div>
             </div>
-            <div class="absolute -bottom-2 -right-2 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+            <div class="absolute -bottom-2 -right-2 bg-accent text-accent-dark px-3 py-1 rounded-full text-xs font-bold shadow-glow">
               🏆 Winner
             </div>
           </div>
         </div>
 
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <div class="space-y-6">
-            <div class="space-y-2 text-center lg:text-left">
-              <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                Hi, I'm <span style="color:#2563eb;">Nguyen Minh Duc</span>
+        <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div class="space-y-6 text-center lg:text-left">
+            <div class="space-y-2">
+              <h1 class="text-4xl md:text-5xl font-bold text-gray-100 leading-tight hero-glitch glow-text">
+                Hi, I'm <span class="text-primary">Nguyen Minh Duc</span>
               </h1>
-              <p class="text-xl text-gray-600">
+              <p class="text-lg md:text-xl text-gray-300">
                 Grade 10 Student at Le Khiet High School for the Gifted
               </p>
             </div>
-
-            <p class="text-lg text-gray-700 leading-relaxed text-center lg:text-left">
+            <p class="text-base md:text-lg text-gray-200 leading-relaxed">
               A passionate student with a strong foundation in academics and technology. 
               I excel in competitive programming, mathematics, and English competitions while 
               pursuing my interests in IT development and sports.
             </p>
-
             <div class="flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start">
-              <button class="scroll-btn px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-200 flex items-center justify-center gap-2" data-target="contact">
-                Get In Touch ►
-              </button>
-              <button class="scroll-btn px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-all duration-200 flex items-center justify-center gap-2" data-target="achievements">
-                View Achievements 🏆
-              </button>
+              <a 
+                href="#contact"
+                class="btn-glow bg-primary text-white rounded-xl px-6 py-3 flex items-center justify-center gap-2 shadow-glow hover:shadow-glow-xl"
+                aria-label="Navigate to contact section"
+              >
+                Get In Touch <i data-lucide="chevron-right" class="w-4 h-4"></i>
+              </a>
+              <a 
+                href="#achievements"
+                class="btn-glow border-2 border-primary text-primary rounded-xl px-6 py-3 flex items-center justify-center gap-2 hover:bg-primary-light"
+                aria-label="Navigate to achievements section"
+              >
+                View Achievements <i data-lucide="trophy" class="w-4 h-4"></i>
+              </a>
             </div>
           </div>
 
           <div class="relative">
-            <div class="bg-gradient-to-br from-blue-100 to-indigo-200 rounded-xl p-8 shadow-xl">
-              <div class="bg-white rounded-xl p-6 shadow-lg">
+            <div class="bg-card rounded-2xl p-6 md:p-8 shadow-glow card-glow">
+              <div class="bg-secondary rounded-xl p-6 shadow-glow">
                 <div class="flex items-center space-x-3 mb-4">
-                  <!-- Replace with user icon -->
-                  <svg width="20" height="20" fill="#2563eb"><!-- sample user icon --><circle cx="10" cy="10" r="8"/></svg>
-                  <span class="font-semibold text-gray-800">Quick Info</span>
+                  <i data-lucide="user" class="w-5 h-5 text-primary"></i>
+                  <span class="font-semibold text-gray-100">Quick Info</span>
                 </div>
                 <div class="space-y-3 text-sm">
                   <div class="flex items-center gap-3">
-                    <!-- phone icon -->
-                    <svg width="16" height="16" fill="#6b7280"><!-- phone icon sample --><circle cx="8" cy="8" r="8"/></svg>
-                    <span class="text-gray-700">0339910089</span>
+                    <i data-lucide="phone" class="w-4 h-4 text-gray-500"></i>
+                    <span class="text-gray-200">0339910089</span>
                   </div>
                   <div class="flex items-center gap-3">
-                    <!-- map pin icon sample -->
-                    <svg width="16" height="16" fill="#6b7280"><circle cx="8" cy="8" r="8"/></svg>
-                    <span class="text-gray-700">Da Nang, Vietnam</span>
+                    <i data-lucide="map-pin" class="w-4 h-4 text-gray-500"></i>
+                    <span class="text-gray-200">Da Nang, Vietnam</span>
                   </div>
                   <div class="flex items-center gap-3">
-                    <!-- book open icon sample -->
-                    <svg width="16" height="16" fill="#6b7280"><circle cx="8" cy="8" r="8"/></svg>
-                    <span class="text-gray-700">Grade 10 Student</span>
+                    <i data-lucide="book-open" class="w-4 h-4 text-gray-500"></i>
+                    <span class="text-gray-200">Grade 10 Student</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="py-16 px-6 bg-white opacity-0 translate-y-10 transition-all duration-700">
-      <div class="max-w-6xl mx-auto">
+    <section id="education" class="py-16 px-4 sm:px-6 bg-secondary">
+      <div class="max-w-7xl mx-auto">
         <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-gray-900 mb-4">Education</h2>
-          <div class="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-100 mb-4 glow-text">Education</h2>
+          <div class="w-20 h-1 bg-primary-line mx-auto rounded-full shadow-glow"></div>
         </div>
         <div class="max-w-3xl mx-auto">
           <div class="relative">
-            <div class="absolute left-4 top-0 bottom-0 w-px bg-blue-200"></div>
-            <div class="relative bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 ml-10 shadow-lg">
-              <div class="absolute -left-6 top-8 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
-                <!-- BookOpen icon replacement -->
-                <svg width="24" height="24" fill="white"><circle cx="12" cy="12" r="10"/></svg>
+            <div class="absolute left-4 top-0 bottom-0 w-px bg-primary"></div>
+            <div class="relative bg-card rounded-xl p-6 md:p-8 ml-10 shadow-glow card-glow">
+              <div class="absolute -left-6 top-8 w-8 h-8 bg-primary rounded-full flex items-center justify-center shadow-glow">
+                <i data-lucide="book-open" class="w-4 h-4 text-white"></i>
               </div>
               <div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">Le Khiet High School for the Gifted</h3>
-                <p class="text-blue-600 font-medium mb-3">Grade 10 • Current</p>
-                <p class="text-gray-700 leading-relaxed">
+                <h3 class="text-xl md:text-2xl font-semibold text-gray-100 mb-2">
+                  Le Khiet High School for the Gifted
+                </h3>
+                <p class="text-primary font-medium mb-3">Grade 10 • Current</p>
+                <p class="text-gray-200 leading-relaxed">
                   Specialized high school education focusing on advanced academics and competitive learning. 
                   Developed strong analytical thinking, problem-solving skills, and academic excellence 
                   in a challenging environment designed for gifted students.
@@ -219,71 +262,68 @@
     </section>
 
     <!-- Achievements Section -->
-    <section id="achievements" class="py-16 px-6 opacity-0 translate-y-10 transition-all duration-700">
-      <div class="max-w-6xl mx-auto">
+    <section id="achievements" class="py-16 px-4 sm:px-6 bg-dark">
+      <div class="max-w-7xl mx-auto">
         <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-gray-900 mb-4">Achievements</h2>
-          <div class="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-100 mb-4 glow-text">Achievements</h2>
+          <div class="w-20 h-1 bg-primary-line mx-auto rounded-full shadow-glow"></div>
         </div>
-        <div class="grid md:grid-cols-2 gap-8">
-          <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+        <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+          <div class="bg-card rounded-xl p-6 md:p-8 shadow-glow card-glow border border-gray-800">
             <div class="flex items-center mb-4">
-              <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
-                <!-- Award icon sample -->
-                <svg width="24" height="24" fill="#22c55e"><circle cx="12" cy="12" r="12"/></svg>
+              <div class="w-12 h-12 bg-success rounded-lg flex items-center justify-center mr-4 shadow-glow">
+                <i data-lucide="award" class="w-6 h-6 text-success"></i>
               </div>
               <div>
-                <h3 class="text-xl font-semibold text-gray-900">IOE Competition</h3>
-                <p class="text-gray-600">International Olympiad of English</p>
+                <h3 class="text-xl font-semibold text-gray-100">IOE Competition</h3>
+                <p class="text-gray-400">International Olympiad of English</p>
               </div>
             </div>
-            <p class="text-gray-700 leading-relaxed">
+            <p class="text-gray-200 leading-relaxed">
               Demonstrated exceptional English language proficiency and competed successfully 
               in this prestigious international competition, showcasing strong communication 
               and analytical skills.
             </p>
           </div>
-
-          <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+          <div class="bg-card rounded-xl p-6 md:p-8 shadow-glow card-glow border border-gray-800">
             <div class="flex items-center mb-4">
-              <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-4">
-                <!-- Trophy icon sample -->
-                <svg width="24" height="24" fill="#ea580c"><circle cx="12" cy="12" r="12"/></svg>
+              <div class="w-12 h-12 bg-warning rounded-lg flex items-center justify-center mr-4 shadow-glow">
+                <i data-lucide="trophy" class="w-6 h-6 text-warning"></i>
               </div>
               <div>
-                <h3 class="text-xl font-semibold text-gray-900">Kangaroo Mathematics</h3>
-                <p class="text-gray-600">Mathematical Competition</p>
+                <h3 class="text-xl font-semibold text-gray-100">Kangaroo Mathematics</h3>
+                <p class="text-gray-400">Mathematical Competition</p>
               </div>
             </div>
-            <p class="text-gray-700 leading-relaxed">
+            <p class="text-gray-200 leading-relaxed">
               Achieved recognition in the Kangaroo Mathematics Competition, demonstrating 
               strong mathematical reasoning, problem-solving abilities, and logical thinking 
               skills in a competitive environment.
             </p>
           </div>
         </div>
-
         <div class="mt-8 text-center">
-          <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">
-            🏆 Multiple Competition Winner
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary-light text-primary-dark rounded-full text-sm font-semibold shadow-glow">
+            <i data-lucide="trophy" class="w-4 h-4"></i>
+            Multiple Competition Winner
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Interests & Skills Section -->
-    <section id="interests" class="py-16 px-6 bg-white opacity-0 translate-y-10 transition-all duration-700">
-      <div class="max-w-6xl mx-auto">
+    <!-- Interests Section -->
+    <section id="interests" class="py-16 px-4 sm:px-6 bg-secondary">
+      <div class="max-w-7xl mx-auto">
         <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-gray-900 mb-4">Interests & Skills</h2>
-          <div class="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-100 mb-4 glow-text">Interests & Skills</h2>
+          <div class="w-20 h-1 bg-primary-line mx-auto rounded-full shadow-glow"></div>
         </div>
-        <div class="grid md:grid-cols-2 gap-8">
+        <div class="grid md:grid-cols-2 gap-6 md:gap-8">
           <div class="space-y-6">
-            <div class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-8 border border-green-100">
+            <div class="bg-success-light rounded-xl p-6 md:p-8 border border-success-light card-glow">
               <div class="flex items-center mb-4">
-                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
-                  <div class="w-6 h-6 bg-green-600 rounded-full"></div>
+                <div class="w-12 h-12 bg-success rounded-lg flex items-center justify-center mr-4">
+                  <div class="w-6 h-6 bg-success rounded-full"></div>
                 </div>
                 <h3 class="text-xl font-semibold text-gray-900">Football</h3>
               </div>
@@ -293,12 +333,10 @@
                 about perseverance and strategic thinking.
               </p>
             </div>
-
-            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 border border-blue-100">
+            <div class="bg-primary-secondary rounded-xl p-6 md:p-8 border border-primary-secondary-border card-glow">
               <div class="flex items-center mb-4">
-                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                  <!-- Code icon sample -->
-                  <svg width="24" height="24" fill="#2563eb"><path d="M0 0h24v24H0z" fill="none"/></svg>
+                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4 shadow-glow">
+                  <i data-lucide="code" class="w-6 h-6 text-white"></i>
                 </div>
                 <h3 class="text-xl font-semibold text-gray-900">IT Development</h3>
               </div>
@@ -309,11 +347,54 @@
               </p>
             </div>
           </div>
-
-          <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-8 border border-purple-100">
-            <h3 class="text-xl font-semibold text-gray-900 mb-6">Technical Skills</h3>
-            <div id="skills-list" class="space-y-4">
-              <!-- Skills will be inserted via JS -->
+          <div class="bg-primary-secondary rounded-xl p-6 md:p-8 border border-primary-secondary-border card-glow">
+            <h3 class="text-xl md:text-2xl font-semibold text-gray-900 mb-6">Technical Skills</h3>
+            <div class="space-y-4">
+              <div class="space-y-2">
+                <div class="flex justify-between text-gray-900">
+                  <span class="text-sm font-semibold">Problem Solving</span>
+                  <span class="text-sm">90%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2.5">
+                  <div class="bg-gradient-primary h-2.5 rounded-full transition-all duration-1000 ease-out" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="space-y-2">
+                <div class="flex justify-between text-gray-900">
+                  <span class="text-sm font-semibold">English Proficiency</span>
+                  <span class="text-sm">85%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2.5">
+                  <div class="bg-gradient-primary h-2.5 rounded-full transition-all duration-1000 ease-out" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="space-y-2">
+                <div class="flex justify-between text-gray-900">
+                  <span class="text-sm font-semibold">Mathematics</span>
+                  <span class="text-sm">88%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2.5">
+                  <div class="bg-gradient-primary h-2.5 rounded-full transition-all duration-1000 ease-out" style="width: 88%"></div>
+                </div>
+              </div>
+              <div class="space-y-2">
+                <div class="flex justify-between text-gray-900">
+                  <span class="text-sm font-semibold">IT Development</span>
+                  <span class="text-sm">75%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2.5">
+                  <div class="bg-gradient-primary h-2.5 rounded-full transition-all duration-1000 ease-out" style="width: 75%"></div>
+                </div>
+              </div>
+              <div class="space-y-2">
+                <div class="flex justify-between text-gray-900">
+                  <span class="text-sm font-semibold">Academic Research</span>
+                  <span class="text-sm">80%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2.5">
+                  <div class="bg-gradient-primary h-2.5 rounded-full transition-all duration-1000 ease-out" style="width: 80%"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -321,176 +402,143 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-16 px-6 bg-gradient-to-br from-blue-600 to-indigo-700 text-white opacity-0 translate-y-10 transition-all duration-700">
-      <div class="max-w-6xl mx-auto">
+    <section id="contact" class="py-16 px-4 sm:px-6 bg-primary">
+      <div class="max-w-7xl mx-auto">
         <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold mb-4">Get In Touch</h2>
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 glow-text">Get In Touch</h2>
           <div class="w-20 h-1 bg-white mx-auto rounded-full"></div>
-          <p class="mt-4 max-w-2xl mx-auto" style="color: #bfdbfe;">
+          <p class="mt-4 text-primary-light max-w-2xl mx-auto">
             I'm always interested in new opportunities, collaborations, and conversations 
             about technology, academics, or sports. Feel free to reach out!
           </p>
         </div>
-
-        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
           <div class="space-y-6">
-            <div class="flex items-center space-x-4 p-4 bg-white/10 rounded-lg backdrop-blur-sm">
-              <!-- phone icon -->
-              <svg width="24" height="24" fill="#bfdbfe"><circle cx="12" cy="12" r="12"/></svg>
+            <div class="flex items-center space-x-4 p-4 bg-glass rounded-xl backdrop-blur-sm card-glow">
+              <i data-lucide="phone" class="w-6 h-6 text-primary-light"></i>
               <div>
-                <p class="font-medium">Phone</p>
-                <p class="text-blue-100">0339910089</p>
+                <p class="font-semibold text-white">Phone</p>
+                <p class="text-primary-light">0339910089</p>
               </div>
             </div>
-            <div class="flex items-center space-x-4 p-4 bg-white/10 rounded-lg backdrop-blur-sm">
-              <!-- location icon -->
-              <svg width="24" height="24" fill="#bfdbfe"><circle cx="12" cy="12" r="12"/></svg>
+            <div class="flex items-center space-x-4 p-4 bg-glass rounded-xl backdrop-blur-sm card-glow">
+              <i data-lucide="map-pin" class="w-6 h-6 text-primary-light"></i>
               <div>
-                <p class="font-medium">Location</p>
-                <p class="text-blue-100">Da Nang, Vietnam</p>
+                <p class="font-semibold text-white">Location</p>
+                <p class="text-primary-light">Da Nang, Vietnam</p>
               </div>
             </div>
-            <div class="flex items-center space-x-4 p-4 bg-white/10 rounded-lg backdrop-blur-sm">
-              <!-- school icon -->
-              <svg width="24" height="24" fill="#bfdbfe"><circle cx="12" cy the="12" r="12"/></svg>
+            <div class="flex items-center space-x-4 p-4 bg-glass rounded-xl backdrop-blur-sm card-glow">
+              <i data-lucide="book-open" class="w-6 h-6 text-primary-light"></i>
               <div>
-                <p class="font-medium">School</p>
-                <p class="text-blue-100">Le Khiet High School for the Gifted</p>
+                <p class="font-semibold text-white">School</p>
+                <p class="text-primary-light">Le Khiet High School for the Gifted</p>
               </div>
             </div>
           </div>
-
-          <div class="bg-white/10 rounded-xl p-8 backdrop-blur-sm">
-            <h3 class="text-xl font-semibold mb-4" style="color: white;">Let's Connect</h3>
-            <p class="text-blue-100 mb-6 leading-relaxed">
+          <div class="bg-glass rounded-xl p-6 md:p-8 backdrop-blur-sm card-glow">
+            <h3 class="text-xl md:text-2xl font-semibold text-white mb-4">Let's Connect</h3>
+            <p class="text-primary-light mb-6 leading-relaxed">
               Whether you want to discuss academic projects, IT development, 
               or just have a friendly chat about football, I'd love to hear from you.
             </p>
             <div class="flex space-x-4">
-              <button class="icon-btn"><!-- GitHub icon --><svg width="24" height="24"><circle cx="12" cy="12" r="12"/></svg></button>
-              <button class="icon-btn"><!-- LinkedIn icon --><svg width="24" height="24"><circle cx="12" cy="12" r="12"/></svg></button>
-              <button class="icon-btn"><!-- Mail icon --><svg width="24" height="24"><circle cx="12" cy="12" r="12"/></svg></button>
+              <a 
+                href="https://github.com/nguyenminhduc" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="flex items-center justify-center w-12 h-12 bg-glass-hover rounded-xl hover:bg-glass-hover card-glow"
+                aria-label="Visit GitHub profile"
+              >
+                <i data-lucide="github" class="w-5 h-5 text-white"></i>
+              </a>
+              <a 
+                href="https://linkedin.com/in/nguyenminhduc" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="flex items-center justify-center w-12 h-12 bg-glass-hover rounded-xl hover:bg-glass-hover card-glow"
+                aria-label="Visit LinkedIn profile"
+              >
+                <i data-lucide="linkedin" class="w-5 h-5 text-white"></i>
+              </a>
+              <a 
+                href="mailto:nguyenminhduc@example.com" 
+                class="flex items-center justify-center w-12 h-12 bg-glass-hover rounded-xl hover:bg-glass-hover card-glow"
+                aria-label="Send email"
+              >
+                <i data-lucide="mail" class="w-5 h-5 text-white"></i>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-  </main>
-
-  <footer class="bg-gray-900 text-gray-300 py-8 px-6">
-    <div class="max-w-6xl mx-auto text-center">
-      <p>&copy; 2025 Nguyen Minh Duc. Built with HTML, CSS & JS and passion for technology.</p>
-    </div>
-  </footer>
+    <!-- Footer -->
+    <footer class="bg-footer text-gray-400 py-8 px-4 sm:px-6">
+      <div class="max-w-7xl mx-auto text-center">
+        <p>&copy; 2025 Nguyen Minh Duc. Built with Electric Xtra Template and passion for technology.</p>
+      </div>
+    </footer>
+  </div>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const sectionIds = ['about', 'education', 'achievements', 'interests', 'contact'];
-      let activeSection = 'about';
-      const isVisible = {};
+    // Initialize Lucide icons
+    lucide.createIcons();
 
-      // Create nav buttons
-      const navButtonsContainer = document.querySelector('#nav-buttons');
-      sectionIds.forEach(function(section) {
-        const btn = document.createElement('button');
-        btn.textContent = section.charAt(0).toUpperCase() + section.slice(1);
-        btn.className = 'capitalize transition-all duration-200 text-gray-600 cursor-pointer';
-        btn.addEventListener('click', function() {
-          scrollToSection(section);
-        });
-        btn.dataset.section = section;
-        navButtonsContainer.appendChild(btn);
-      });
-      // Un-hide nav buttons for larger viewports (for simplicity always shown)
-      navButtonsContainer.classList.remove('hidden');
-
-      // Intersection Observer
-      const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          isVisible[entry.target.id] = entry.isIntersecting;
-          // Add or remove classes for transition
-          if(entry.target.id !== 'about') {
-            if(entry.isIntersecting) {
-              entry.target.classList.remove('opacity-0', 'translate-y-10');
-              entry.target.classList.add('opacity-100', 'translate-y-0');
-            } else {
-              entry.target.classList.remove('opacity-100', 'translate-y-0');
-              entry.target.classList.add('opacity-0', 'translate-y-10');
-            }
-          }
-          // Also update activeSection based on visibility
-          if(entry.isIntersecting) {
-            activeSection = entry.target.id;
-            updateNavActive();
-          }
-        });
-      }, { threshold: 0.1 });
-
-      sectionIds.forEach(function(section) {
-        const sec = document.getElementById(section);
-        if(sec) observer.observe(sec);
-      });
-
-      // Scroll-to behavior
-      function scrollToSection(sectionId) {
-        const el = document.getElementById(sectionId);
-        if(el) {
-          el.scrollIntoView({ behavior: 'smooth' });
-          activeSection = sectionId;
-          updateNavActive();
-        }
+    // Create floating particles
+    function createParticles() {
+      const particlesContainer = document.getElementById('particles');
+      for (let i = 0; i < 20; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 6 + 's';
+        particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+        particlesContainer.appendChild(particle);
       }
+    }
 
-      // Update nav button styles
-      function updateNavActive() {
-        const btns = navButtonsContainer.querySelectorAll('button');
-        btns.forEach(function(btn) {
-          const sec = btn.dataset.section;
-          if(sec === activeSection) {
-            btn.classList.remove('text-gray-600');
-            btn.classList.add('text-blue-600', 'font-medium');
-          } else {
-            btn.classList.add('text-gray-600');
-            btn.classList.remove('text-blue-600', 'font-medium');
+    // Navigation and progress
+    document.addEventListener('DOMContentLoaded', () => {
+      createParticles();
+
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav-link');
+      const progressBar = document.getElementById('progress-bar');
+
+      // Navigation active state
+      const setActiveLink = () => {
+        let current = '';
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          if (window.scrollY >= sectionTop - 60) {
+            current = section.getAttribute('id');
           }
         });
-      }
+        navLinks.forEach((link) => {
+          link.classList.remove('active');
+          if (link.getAttribute('href').substring(1) === current) {
+            link.classList.add('active');
+          }
+        });
+      };
 
-      // Insert skills progress bars
-      const skills = [
-        { skill: 'Problem Solving', level: 90 },
-        { skill: 'English Proficiency', level: 85 },
-        { skill: 'Mathematics', level: 88 },
-        { skill: 'IT Development', level: 75 },
-        { skill: 'Academic Research', level: 80 }
-      ];
-      const skillsList = document.getElementById('skills-list');
-      skills.forEach(function(item) {
-        const wrapper = document.createElement('div');
-        wrapper.className = 'space-y-2';
-        const line = document.createElement('div');
-        line.className = 'flex justify-between';
-        const spanSkill = document.createElement('span');
-        spanSkill.className = 'text-sm font-medium text-gray-700';
-        spanSkill.textContent = item.skill;
-        const spanLevel = document.createElement('span');
-        spanLevel.className = 'text-sm text-gray-600';
-        spanLevel.textContent = item.level + '%';
-        line.appendChild(spanSkill);
-        line.appendChild(spanLevel);
-        const barBackground = document.createElement('div');
-        barBackground.className = 'w-full bg-gray-200 rounded-full h-2';
-        const barFill = document.createElement('div');
-        barFill.className = 'bg-gradient-to-r from-blue-600 to-purple-600 h-2 rounded-full';
-        barFill.style.width = item.level + '%';
-        barFill.style.transition = 'width 1s ease-out';
-        barBackground.appendChild(barFill);
-        wrapper.appendChild(line);
-        wrapper.appendChild(barBackground);
-        skillsList.appendChild(wrapper);
+      // Scroll progress bar
+      const updateProgressBar = () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = (scrollTop / docHeight) * 100;
+        progressBar.style.width = `${progress}%`;
+      };
+
+      window.addEventListener('scroll', () => {
+        setActiveLink();
+        updateProgressBar();
       });
-
+      setActiveLink();
+      updateProgressBar();
     });
   </script>
 </body>
